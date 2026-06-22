@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再次回访 · B体育</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9f6f0;
+            font-family: 'Segoe UI', 'PingFang SC', Roboto, system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: #2d2a26;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            background-color: #fffffffb;
+            padding: 3rem 2.5rem;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #1f1c18;
+            margin-bottom: 1.8rem;
+            border-left: 4px solid #d4b68a;
+            padding-left: 1.2rem;
+        }
+
+        .opening {
+            font-size: 1.15rem;
+            background: #f2ede5;
+            padding: 1.5rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 2.2rem;
+            color: #2e2a24;
+            border: 1px solid #e4dacb;
+            line-height: 1.8;
+        }
+
+        .opening strong {
+            font-weight: 600;
+            color: #7b5f3f;
+        }
+
+        .story-para {
+            margin-bottom: 1.8rem;
+            text-align: justify;
+        }
+
+        .story-para a {
+            color: #7b5f3f;
+            text-decoration: none;
+            border-bottom: 1px solid #d4b68a;
+            font-weight: 500;
+            transition: border-color 0.2s;
+        }
+
+        .story-para a:hover {
+            border-bottom-color: #3f2e1c;
+        }
+
+        .feature-list {
+            background: #f7f2ea;
+            padding: 1.8rem 2rem 1.8rem 2.2rem;
+            border-radius: 24px;
+            margin: 2rem 0 2.2rem 0;
+            list-style: none;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.2rem;
+            font-weight: 430;
+        }
+
+        .feature-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #aa8b6c;
+            font-size: 1.3rem;
+        }
+
+        .feature-list li strong {
+            font-weight: 600;
+            color: #4e3f2e;
+        }
+
+        .pullquote {
+            margin: 2rem 0 2.2rem 0;
+            padding: 1.2rem 2rem;
+            background: #fff9f2;
+            border-left: 5px solid #c7b09a;
+            border-radius: 0 16px 16px 0;
+            font-style: normal;
+            color: #3d352c;
+            font-size: 1rem;
+            box-shadow: inset 0 0 0 1px #efe6db;
+        }
+
+        .pullquote span {
+            background: #e9ddcf;
+            padding: 0.1rem 0.4rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: #4b3a2a;
+        }
+
+        .scene-card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.8rem 0 2rem 0;
+        }
+
+        .scene-item {
+            flex: 1 1 180px;
+            background: #faf6f0;
+            padding: 1.2rem 1.2rem;
+            border-radius: 20px;
+            border: 1px solid #e5dbcf;
+        }
+
+        .scene-item h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #5b4b39;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.02em;
+        }
+
+        .scene-item p {
+            font-size: 0.95rem;
+            color: #4b3e30;
+            line-height: 1.6;
+        }
+
+        .faq-mini {
+            background: #f2ede5;
+            border-radius: 24px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0 1.2rem 0;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.6rem;
+            border-bottom: 1px dashed #d6cabb;
+            padding-bottom: 0.6rem;
+        }
+
+        .faq-mini details:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-mini summary {
+            font-weight: 520;
+            cursor: pointer;
+            color: #3f3328;
+            padding: 0.25rem 0;
+        }
+
+        .faq-mini summary::-webkit-details-marker {
+            color: #9f876e;
+        }
+
+        .faq-mini p {
+            margin-top: 0.4rem;
+            padding-left: 0.6rem;
+            color: #514439;
+            font-size: 0.95rem;
+        }
+
+        .gentle-close {
+            margin-top: 2.2rem;
+            padding: 1.5rem 0 0.2rem 0;
+            border-top: 1px solid #e2d6c8;
+            font-size: 1rem;
+            color: #4e4236;
+        }
+
+        .gentle-close a {
+            color: #7b5f3f;
+            text-decoration: none;
+            border-bottom: 1px solid #d4b68a;
+            font-weight: 500;
+        }
+
+        .gentle-close a:hover {
+            border-bottom-color: #3f2e1c;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #8f8274;
+            letter-spacing: 0.3px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+
+            .page {
+                padding: 1.8rem 1.2rem;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+
+            .opening {
+                padding: 1.2rem 1.2rem;
+                font-size: 1rem;
+            }
+
+            .feature-list {
+                padding: 1.2rem 1rem 1.2rem 1.5rem;
+            }
+
+            .scene-item {
+                flex: 1 1 100%;
+            }
+
+            .pullquote {
+                padding: 1rem 1.2rem;
+            }
+
+            .faq-mini {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>再度回访 · 一种熟悉的节奏</h1>
+
+    <div class="opening">
+        <strong>有些页面值得被保存。</strong> 不是因为它宣示什么，而是因为它一直在那里——稳定、清晰、不说多余的话。当你再次点开收藏夹里的那个链接，界面没有变样，内容依旧有序。这种确定性，在信息流里渐渐稀缺。
+    </div>
+
+    <p class="story-para">
+        你也许隔几周才打开一次 <a href="https://mains-bsports.com">B体育</a> 。不为了刷新什么消息，更像是一种习惯性的回访。页面干净，导航直接，没有弹窗催促你注册或订阅。它只是提供你关注的那些赛程、数据、变动，剩下的都留给你自己判断。
+    </p>
+
+    <p class="story-para">
+        持续关注一个平台，往往不是因为功能多花哨，而是它始终用同一套语汇和你对话。从赛季初到尾声，从人员调整到积分变化，信息更新的节奏稳定，不制造焦虑，也不刻意煽动。这种克制本身，就是一种专业态度。
+    </p>
+
+    <ul class="feature-list">
+        <li><strong>赛程脉络清晰</strong> —— 列表、日历、筛选，三种视角切换，没有冗余装饰</li>
+        <li><strong>数据持续沉淀</strong> —— 历史记录保留完整，你可以回溯几个月前的关键场次</li>
+        <li><strong>界面轻简，响应迅速</strong> —— 没有大图轮播或自动播放视频，纯内容优先的结构</li>
+        <li><strong>收藏即入口</strong> —— 每次回访，看到的都是你想要的那一版信息布局</li>
+        <li><strong>无过度个性化推送</strong> —— 不追踪你的浏览习惯，不强制推荐</li>
+    </ul>
+
+    <div class="pullquote">
+        <span>“回访”</span> 这个词本身就包含一种安静的信任。你不需要重新学习界面逻辑，不需要辨认新功能的位置——它像一本翻阅多次的笔记，标记都在原来的地方。
+    </div>
+
+    <div class="scene-card">
+        <div class="scene-item">
+            <h3>周末赛前</h3>
+            <p>打开收藏夹，快速确认阵容变动和近期交锋数据，不需要登录或等待加载视频。</p>
+        </div>
+        <div class="scene-item">
+            <h3>赛季中复盘</h3>
+            <p>对比几周前的记录，看趋势走向。页面状态始终一致，无广告或自动跳转。</p>
+        </div>
+        <div class="scene-item">
+            <h3>碎片时间扫读</h3>
+            <p>列表模式扫一遍，信息密度刚好。不费眼，不消耗注意力。</p>
+        </div>
+    </div>
+
+    <div class="faq-mini">
+        <details>
+            <summary>为什么选择收藏而不是每次搜索？</summary>
+            <p>搜索每次都会面临不同的结果排序和可能的干扰信息。收藏直接指向稳定入口——<a href="https://mains-bsports.com">B体育</a> 的页面结构长期保持一致，收藏后几乎不需要重新适应。</p>
+        </details>
+        <details>
+            <summary>页面会频繁改版吗？</summary>
+            <p>改版以信息优化为主，不重构布局或交互逻辑。视觉和导航的变化是渐进式的，用户不会突然面对陌生界面。</p>
+        </details>
+        <details>
+            <summary>是否收集用户行为？</summary>
+            <p>不进行跨站追踪，不建立用户画像。浏览行为仅用于基础性能优化，无个性化广告推送。</p>
+        </details>
+    </div>
+
+    <div class="gentle-close">
+        持续关注一个地方，有时并不需要太多理由。它只是恰好在你的收藏夹里、在你不定期回访时，仍旧保持着你最初认定的样子。如果你也习惯了这种节奏，不妨继续把它留在视线之内——<a href="https://mains-bsports.com">B体育</a> 始终在那里，不打扰，也不缺席。
+    </div>
+
+    <div class="footer-note">
+        —— 页面仅作介绍，内容基于长期使用观察。
+    </div>
+</div>
+</body>
+</html>
